@@ -1,0 +1,73 @@
+.zoomInOn,
+.zoomInOff,
+.zoomOutOn,
+.zoomOutOff,
+.closeButton {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    position: absolute;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 50%;
+    bottom: 20px;
+    transition: all 0.4s;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.zoomInOn,
+.zoomInOff {
+    background:rgba(245,245,245,0.6);
+    right: 60px;
+
+}
+.zoomInOn:after,
+.zoomInOff:after {
+    content:"";
+    position: absolute;
+    width:18px;
+    height: 2px;
+    background-color: #fff;
+
+}
+.zoomInOn:before,
+.zoomInOff:before {
+    content:"";
+    position: absolute;
+    width:2px;
+    height: 18px;
+    background-color: #fff;
+
+}
+
+.zoomOutOn,
+.zoomOutOff {
+    background:rgba(245,245,245,0.6);
+
+    right: 20px
+}
+.zoomOutOn:after,
+.zoomOutOff:after {
+  content:"";
+  position: absolute;
+  width:18px;
+  height: 2px;
+  background-color: #fff;
+}
+.zoomInOn,
+.zoomOutOn {
+    opacity: 1;
+    cursor: pointer
+}
+.zoomInOff,
+.zoomOutOff {
+    opacity: .3;
+    cursor: auto
+}

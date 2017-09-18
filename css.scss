@@ -1,26 +1,39 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-html, body {
-  padding: 0;
-  margin: 0;
+
+
+/* Start Intros */
+
+.intro-viz {
+  background: url(img/collection02/intro-bg.svg) no-repeat;
+  background-size:  contain;
+  width:50vw;
+  height:130vh;
+  position: absolute;
+  right:0;
+  top:-30px;
+  transform: rotate(0);
 }
 
-.c-002 {
-  background: url(img/collection02/intro-bg.svg) right -100px no-repeat;
-  background-size:  120vh;
-}
-
-
-
+/* End Intros */
 
 h1 {
-  font-size: 20px;
+  font-size: 30px;
   position: absolute;
   display: block;
   text-transform: uppercase;
   letter-spacing: 5px;
+
+  font-weight: 100;
+
 
 }
 
@@ -49,7 +62,7 @@ collection {
 
 
 #home {
-  height:200vh;
+  height:120vh;
   h1{
       left:25vw;
       top:25vh;
@@ -60,45 +73,59 @@ collection {
       }
   }
 }
-#collection-002{
+#collection002{
     position:relative;
-    overflow:hidden;
-    [type=round] {
-      border-radius: 50%;
-      box-shadow:0 0 50px rgba(0,0,0,0.2);
-      background: #999;
-      display: block;
-      overflow: hidden;
-      width:300px;
-      height: 300px;
-      transform: scale(0);
-      background-size: cover;
+    margin-top: -120px;
 
-
+    .slice {
+        max-width: 1000px;
+        justify-content: center;
+        min-height:300px;
+        border:0px solid;
+        margin: 0 auto;
+        position: relative;
 
     }
 
-    #img1 {
+    div.round {
+        border-radius: 50%;
+        box-shadow:0 0 50px rgba(0,0,0,0.2);
+        background: #999;
+        display: block;
+        width:300px;
+
+        height: 300px;
+        transform: scale(0);
+        background-size: cover;
+        cursor: pointer;
+
+
+
+      }
+
+
+    #A002001 {
       margin: 10px 0 20px 20px;
       background-image: url(img/collection02/thumb-space.jpg);
 
     }
-    #img2 {
-      margin: 18vh 0 20px 10%;
-
+    #A002002 {
+      margin: -50px 0 20px 10%;
+      float: right;
       background-image: url(img/collection02/thumb-pope.jpg);
     }
-    #img3 {
-      margin: 10vh 0 20px 50vw;
+    #A002003 {
 
+      margin-left: 20%;
+      margin-top: 20%;
       background-image: url(img/collection02/thumb-dots.jpg);
     }
-    #img4 {
-      margin: 10vh 0 20px 20vw;
+    #A002004 {
+      margin: 0 20% 0 50%;
       background-image: url(img/collection02/thumb-bum.jpg);
     }
-    #img5 {
-      margin: 10vh 0 20px 5vw;
+    #A002005 {
+      margin: -0vh 0 20px 20%;
       background-image: url(img/collection02/thumb-trap.jpg);
     }
 }
@@ -147,36 +174,106 @@ collection {
 
         }
 
-        #img1 {
-          width:230px;
-          height:230px;
-          margin: 10px 0 20px 20px;
 
-        }
-        #img2 {
-          width:150px;
-          height:150px;
-          margin: 18vh 0 20px 10%;
-
-        }
-        #img3 {
-          width:190px;
-          height:190px;
-          margin: 10vh 0 20px 40vw;
-
-        }
-        #img4 {
-          width:240px;
-          height:240px;
-          margin: 20vh 0 20px 20vw;
-
-        }
-        #img5 {
-          width:200px;
-          height:200px;
-          margin: 5vh 0 20px 5vw;
-
-        }
     }
 
+}
+
+
+#art-window{
+    position: fixed;
+    display: none;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    background: #fff;
+    color: #222;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.45s ease-out;
+    //transform: scale3d(0.8,0.8,0.8);
+
+
+
+    #art-container{
+      position: absolute;
+      width:100vh;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+
+    }
+
+    .art-space {
+      height:100%;
+      width:100%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+
+
+    }
+
+    .details {
+
+      position: absolute;
+      bottom: 5px;
+      //background: rgba(0,0,0,0.5);
+      width:100%;
+      //color: #fff;
+      padding: 10px 0 1px 10px;
+      text-transform: uppercase;
+      font-size: 10px;
+      line-height: 10px;
+      letter-spacing: 2px;
+      pointer-events: none;
+      z-index:2;
+
+      p {
+        margin: 0 0 0 50px;
+        padding: 0 0 2px 0;
+        transition: all 0.5s;
+        opacity: 0;
+
+
+
+
+      }
+
+      .tag {
+        display: none;
+        font-size: 8px;
+        font-weight: bold;
+        letter-spacing: 3px;
+      }
+
+      .desc {
+
+      }
+
+
+
+      .sold {
+       text-decoration: line-through;
+      }
+
+
+
+    }
+
+    &.open{
+      opacity: 1;
+      pointer-events: all;
+      transform: scale3d(1,1,1);
+      display: block;
+
+    }
+
+}
+
+#art-window.open p {
+  display: block;
+  transition: all 0.5s !important;
+  transition-delay: 2s !important;
+  opacity: 0.5;
+  margin-left: 0;
 }

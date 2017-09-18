@@ -3,9 +3,12 @@
     <meta charset="utf-8">
 
     <title>MANISA MALI</title>
-    <link rel="stylesheet" href="libs/animate.css">
-    <link rel="stylesheet" href="css.css?v=1.0">
-    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" href="css.css?v=1.0"/>
+    <link rel="stylesheet" href="libs/pinch/pinchzoomer.min.css?v=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
     <style>
         * {
@@ -13,23 +16,29 @@
           font-size: 1em;
         }
     </style>
-
-  <body class="c-002">
+  <body></body>
+  <div class="c-002">
 
   <div class="section" id="home">
 
-      <h1>Manisa Mali <br><collection>New Collection &nbsp; II II</collection></h1>
-
+      <h1>Manisa Mali <br><collection>New Collection &nbsp; |&nbsp;&nbsp;||</collection></h1>
+      <div class="intro-viz"></div>
 
   </div>
 
-  <div class="section" id="collection-002">
+  <div class="section" id="collection002">
 
-      <div type="round" id="img1"></div>
-      <div type="round" id="img2"></div>
-      <div type="round" id="img3"></div>
-      <div type="round" id="img4"></div>
-      <div type="round" id="img5"></div>
+      <div class="slice">
+        <div class="round" id="A002001"></div>
+        <div class="round" id="A002002"></div>
+      </div>
+      <div class="slice">
+        <div class="round" id="A002003"></div>
+        <div class="round" id="A002004"></div>
+      </div>
+      <div class="slice">
+        <div class="round" id="A002005"></div>
+      </div>
 
 
   </div>
@@ -50,7 +59,7 @@
 
 
       <div class="block">
-          <h2>From Bangkok to New York to Athens and now in London.</h2>
+          <h2>Bangkok, New York, Athens and now London.</h2>
 
 
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -60,17 +69,53 @@
       </div>
   </div>
 
+  <div id="art-window"></div>
+
+
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.ui.min.js"></script>
 
+  <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+
+  <script src="libs/pinch/jquery-1.10.0.min.js"></script>
+
+  <script src="libs/pinch/modernizr.min.js"></script>
+
+  <script src="libs/pinch/prettify.js" type="text/javascript" ></script>
+
+  <script src="libs/pinch/jquery.mousewheel.min.js" type="text/javascript"></script>
+  <script src="libs/pinch/jquery.hammer.min.js" type="text/javascript"></script>
+
+  <script src="libs/pinch/TweenMax.min.js" type="text/javascript"></script>
+  <script src="libs/pinch/ScrollToPlugin.min.js" type="text/javascript"></script>
+  <script src="libs/pinch/main.min.js" type="text/javascript"></script>
+
+
+  <script id="art-template" type="text/x-handlebars-template">
+
+        <div id="art-container">
+
+          <img class="art-space" id="art-img"  src="{{art}}"/>
+        </div>
+        <div class="details">
+
+
+              <p class="tag">{{{tag}}}</p>
+
+              {{#if sold}}
+                <p class="sold">£{{price}}</p>
+                <p>Sorry. Someone took this home already :(</a>
+              {{else}}
+                <p class="sold">£{{price}}</p>
+                <p><a href="#">Available! Own it.</a></p>
+              {{/if}}
+              <p class="desc">{{description}}</p>
+        </div>
+
+	</script>
+
   <script src="js.js"></script>
 
-
-  <div id="LB">
-    <div if="IMG-VIEW"></div>
-    <div id="IMG-INFO"></div>
-  </div>
-
-  </body>
+</div>
 </html>
