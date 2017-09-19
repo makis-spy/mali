@@ -54,7 +54,8 @@ function openLighBox(obj){
 
     setTimeout(function(){
         $("#art-img").pinchzoomer()
-    },0)
+        detailEl.className="open ready"
+    },1000)
 
 }
 function closeLightBox(){

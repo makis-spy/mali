@@ -180,9 +180,11 @@ collection {
 }
 
 
+/* ** ART WINDOW ZOOM ** */
+
 #art-window{
     position: fixed;
-    display: none;
+
     top:0;
     left:0;
     right:0;
@@ -191,9 +193,8 @@ collection {
     color: #222;
     opacity: 0;
     pointer-events: none;
-    transition: all 0.45s ease-out;
-    //transform: scale3d(0.8,0.8,0.8);
-
+    //transition: all 0.7s ease-out;
+    transform: scale3d(0.8,0.8,0.8);
 
 
     #art-container{
@@ -209,17 +210,13 @@ collection {
       height:100%;
       width:100%;
       box-shadow: 0 0 10px rgba(0,0,0,0.15);
-
-
     }
 
     .details {
 
       position: absolute;
       bottom: 5px;
-      //background: rgba(0,0,0,0.5);
       width:100%;
-      //color: #fff;
       padding: 10px 0 1px 10px;
       text-transform: uppercase;
       font-size: 10px;
@@ -228,16 +225,8 @@ collection {
       pointer-events: none;
       z-index:2;
 
-      p {
-        margin: 0 0 0 50px;
-        padding: 0 0 2px 0;
-        transition: all 0.5s;
-        opacity: 0;
 
 
-
-
-      }
 
       .tag {
         display: none;
@@ -250,13 +239,9 @@ collection {
 
       }
 
-
-
       .sold {
        text-decoration: line-through;
       }
-
-
 
     }
 
@@ -264,16 +249,24 @@ collection {
       opacity: 1;
       pointer-events: all;
       transform: scale3d(1,1,1);
-      display: block;
+
+
 
     }
 
 }
 
-#art-window.open p {
+.details p {
+  margin: 0 0 2px 0;
   display: block;
-  transition: all 0.5s !important;
-  transition-delay: 2s !important;
-  opacity: 0.5;
-  margin-left: 0;
+  padding: 0;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 2s;
+
+}
+
+.ready .details p {
+    //transform: rotateX(0);
+    opacity: 1;
 }
