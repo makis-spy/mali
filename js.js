@@ -55,7 +55,7 @@ function openLighBox(obj){
     setTimeout(function(){
         $("#art-img").pinchzoomer()
         detailEl.className="open ready"
-    },1000)
+    },100)
 
 }
 function closeLightBox(){
@@ -64,7 +64,7 @@ function closeLightBox(){
 
 detailEl.addEventListener("click",function(evt){
 
-      closeLightBox()
+    //  closeLightBox()
 })
 
 document.querySelector("#collection002").addEventListener("click",function(evt){
