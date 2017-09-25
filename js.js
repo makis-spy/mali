@@ -4,12 +4,20 @@ var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: 500}
 
 let arr = document.querySelectorAll("div.round");
 
+window.addEventListener("scroll",function(e){
+      if(document.body.scrollTop>0){
+          document.body.className="scrolled"
+      }else{
+          document.body.className = ""
+      }
+
+});
 
 
 [].forEach.call(arr, function(div) {
             new ScrollMagic.Scene({triggerElement: div, duration: 10})
             .triggerHook(0.6)
-            .reverse(false)
+            .reverse(true)
             .on("enter", function () {
 
 
@@ -17,6 +25,7 @@ let arr = document.querySelectorAll("div.round");
 
 
             })
+
             .addTo(controller)
 })
 
