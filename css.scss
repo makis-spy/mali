@@ -61,9 +61,7 @@ html, body {
 
 }
 
-.scrolled {
 
-}
 
 /* Start Intros */
 
@@ -129,9 +127,22 @@ collection {
       }
   }
 }
+
+.scrolled {
+  #collection002{
+    div.round {
+        transform: scale3d(1,1,1);
+    }
+  }
+}
+
 #collection002{
-    position:relative;
-    margin-top: -50vh;
+
+    margin-top: -100vh;
+    margin: -100vh auto 0 auto;
+    max-width: 1000px;
+
+
 
     .slice {
         max-width: 1000px;
@@ -148,43 +159,39 @@ collection {
         //box-shadow:0 0 50px rgba(0,0,0,0.2);
         background: #999;
         display: block;
-        width:200px;
-
-        height: 200px;
-        transform: scale(0);
+        width:250px;
+        transition: all 0.5s;
+        transform: scale3d(0,0,0);
+        height: 250px;
         background-size: cover;
         cursor: pointer;
-
-
 
       }
 
 
     #A002001 {
-      margin: 10px 0 20px 20px;
+
       background-image: url(img/collection02/thumb-space.jpg);
 
     }
 
     #A002004 {
-      margin: -120px 0 20px 10%;
+
         float: right;
+        transition-delay: 0.5s;
       background-image: url(img/collection02/thumb-bum.jpg);
     }
     #A002003 {
-
-      margin-left: 20%;
-      margin-top: 20%;
+      transition-delay: 1s;
       background-image: url(img/collection02/thumb-dots.jpg);
     }
     #A002002 {
-          margin: 0 20% 0 50%;
-
-
+      float: right;
+      transition-delay: 1.5s;
       background-image: url(img/collection02/thumb-pope.jpg);
     }
     #A002005 {
-      margin: -0vh 0 20px 20%;
+      transition-delay: 2s;
       background-image: url(img/collection02/thumb-trap.jpg);
     }
 }

@@ -1,34 +1,16 @@
 
 
-var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: 500}});
-
-let arr = document.querySelectorAll("div.round");
 
 window.addEventListener("scroll",function(e){
-      if(document.body.scrollTop>0){
+      if(document.body.scrollTop>20){
           document.body.className="scrolled"
-      }else{
+      }else if(document.body.scrollTop<=20){
           document.body.className = ""
+      }else if(document.body.scrollTop>scree.height){
+
       }
 
 });
-
-
-[].forEach.call(arr, function(div) {
-            new ScrollMagic.Scene({triggerElement: div, duration: 10})
-            .triggerHook(0.6)
-            .reverse(true)
-            .on("enter", function () {
-
-
-              Velocity(div, 'transition.bounceIn');
-
-
-            })
-
-            .addTo(controller)
-})
-
 
 
 
