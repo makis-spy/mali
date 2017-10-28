@@ -3,7 +3,10 @@
 
   margin: 0 auto 0 auto;
   background: #0E0E0E;
-  padding-bottom: 100px;
+  padding-bottom: 500px;
+  position: relative;
+  width:100%;
+  z-index: -1;
 
   .zoom-out{
     opacity: 0;

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css.css?v=1.0"/>
 
     <link rel="stylesheet" href="c002/c002.css?v=1.0"/>
+    <link rel="stylesheet" href="illustration/illustration.css?v=1.0"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
@@ -40,16 +41,17 @@
 
       <div id="intro-viz"></div>
       <div class="thumbs">
-          <div class="round" id="A002001"></div>
+
+            <div class="round"  data-img="art-space" id="A002001"></div>
 
             <h1>Manisa Mali <br><collection>New Collection ... &nbsp;ART I&nbsp;&nbsp;II</collection></h1>
 
-            <div class="round" data-img="art-pope" id="A002004"></div>
-          <div class="round" data-img="art-bum" id="A002003"></div>
-          <div class="round" id="A002002"></div>
+            <div class="round" data-img="art-bum" id="A002004"></div>
+            <div class="round" data-img="art-dots" id="A002003"></div>
+            <div class="round" data-img="art-pope"  id="A002002"></div>
 
 
-          <div class="round" id="A002005"></div>
+            <div class="round" data-img="art-trap" id="A002005"></div>
 
       </div>
 
@@ -57,7 +59,7 @@
 
   </div>
   <div class="section" id="illustration-splash">
-
+          <img class="card" id="illustration-splash-img" src="illustration/card.jpg">
   </div>
   <div class="section" id="illustration-people">
 
@@ -107,10 +109,10 @@
                 <p class="sold">£{{price}}</p>
                 <p>Sorry. Someone took this home already :(</a>
               {{else}}
-                <p class="sold">£{{price}}</p>
-                <p><a href="#">Available! Own it.</a></p>
+                <p class="">£{{price}}</p>
+                <p><a href="http://www.paypal.com">Available! Own it.</a></p>
               {{/if}}
-              <p class="desc">{{description}}</p>
+                <p class="desc">{{description}}</p>
 
 
 
