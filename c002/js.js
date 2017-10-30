@@ -36,15 +36,40 @@ var collection02 = {
   }
 
 }
-
+var illustrations = {
+  eyes:{
+    price:"250",
+    sold : false,
+    tag : "eyes",
+    description:'A3 16.5" x 11.7". marker on paper',
+    art : "illustration/art-eyes.jpg"
+  },
+  kids:{
+      tag : "Kids",
+      price:"-Inquire",
+      sold : false,
+      description:'Print pattern for fabric',
+      art : "illustration/art-kids.jpg"
+    },
+    jail:{
+      price:"250",
+      sold : false,
+        tag : "Jail",
+        description:'A3 16.5" x 11.7". marker on paper',
+        art : "illustration/art-jail.jpg"
+      }
+}
 
 var source   = document.getElementById("art-template").innerHTML
 var template = Handlebars.compile(source)
-
+var viewer
+var ARTWIN
 
 function openLighBox(obj){
 
-    obj = collection02[obj.id]
+    collection = eval($(obj).attr('data-collection'))
+
+    obj = collection[obj.id]
 
     ARTWIN.addClass("open")
     $('#art-details').html(template(obj))
@@ -66,19 +91,19 @@ function closeLightBox(){
     $(document.body).css('overflow','auto')
 }
 
-var viewer
-var ARTWIN
+
 
 $(document).ready(function(){
 
     ARTWIN = $('#art-window')
 
     viewer = ImageViewer('#art-image',{
-      zoomValue : 200
+      zoomValue : 50
     })
 
 
-    $(".round").on("click",function(){
+    $(".round, .art-box").on("click",function(){
+
       openLighBox(this)
     })
 

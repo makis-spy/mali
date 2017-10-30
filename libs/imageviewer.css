@@ -28,7 +28,7 @@
   display: block;
   position: absolute;
   right: 30px;
-  bottom: 30px;
+  top: 30px;
   z-index: 3000;
   cursor: pointer;
   text-align: center;

@@ -4,9 +4,9 @@
   margin: 0 auto 0 auto;
   background: #0E0E0E;
   padding-bottom: 500px;
-  position: relative;
+
   width:100%;
-  z-index: -1;
+
 
   .zoom-out{
     opacity: 0;
@@ -51,6 +51,7 @@
       padding: 20px;
       margin: 0 auto;
 
+
       div.round {
           border-radius: 50%;
           box-shadow:0 0 70px 5px rgba(255,255,255,0.3);
@@ -63,6 +64,7 @@
           cursor: pointer;
           margin-top:50px;
           opacity: 1;
+
 
       }
 
