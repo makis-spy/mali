@@ -19,7 +19,7 @@
     left:50%;
     transform: translate(-50%,-20%);
     opacity: 0;
-    transition: all 2s;
+    transition: all 3s;
     position: absolute;
   }
 
@@ -29,7 +29,9 @@
     max-height: 600px;
     max-width: 450px;
 
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     cursor: pointer;
     float: left;
     margin: 0 10px;
@@ -40,10 +42,22 @@
     background-image: url(../illustration/thumb-jail.jpg)
   }
   #kids {
+        background-size: contain;
+    max-height: 600px;
     background-image: url(../illustration/thumb-kids.jpg)
   }
   #eyes {
     background-image: url(../illustration/thumb-eyes.jpg)
+  }
+  #leaves {
+    background-image: url(../illustration/thumb-leaves.jpg)
+  }
+  #hat {
+    transform: none;
+    max-height: 562px;
+    max-width: 600px;
+    background-size: contain;
+    background-image: url(../illustration/thumb-hat.jpg)
   }
 
 }

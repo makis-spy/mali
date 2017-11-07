@@ -38,7 +38,7 @@ var collection02 = {
 }
 var illustrations = {
   eyes:{
-    price:"250",
+    price:"300",
     sold : false,
     tag : "eyes",
     description:'A3 16.5" x 11.7". marker on paper',
@@ -50,14 +50,27 @@ var illustrations = {
       sold : false,
       description:'Print pattern for fabric',
       art : "illustration/art-kids.jpg"
-    },
-    jail:{
-      price:"250",
+  },
+  jail:{
+      price:"120",
       sold : false,
-        tag : "Jail",
-        description:'A3 16.5" x 11.7". marker on paper',
-        art : "illustration/art-jail.jpg"
-      }
+      tag : "Jail",
+      description:'A3 16.5" x 11.7". marker on paper',
+      art : "illustration/art-jail.jpg"
+  },
+  hat:{
+      price:"150",
+      sold : true,
+      tag : "hat",
+      description:'A3 16.5" x 11.7". marker on paper',
+      art : "illustration/art-hat.jpg"
+  },leaves:{
+      price:"300",
+      sold : true,
+      tag : "leaves",
+      description:'A3 16.5" x 11.7". marker on paper',
+      art : "illustration/art-leaves.jpg"
+  }
 }
 
 var source   = document.getElementById("art-template").innerHTML
