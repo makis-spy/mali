@@ -2,6 +2,7 @@ var collection02 = {
   A002001:{
     price:"500",
     sold : true,
+    id: "A002001",
     tag : "|&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;|",
     description:'A3 16.5" x 11.7". marker on paper',
     art : "c002/art-space.jpg"
@@ -9,6 +10,7 @@ var collection02 = {
   A002002:{
     price:"800",
     sold : false,
+    id: "A002002",
     tag : "|&nbsp;&nbsp;||&nbsp;&nbsp;||",
     description:'A3 16.5" x 11.7". marker on paper',
     art : "c002/art-pope.jpg"
@@ -16,6 +18,7 @@ var collection02 = {
   A002003:{
     price:"800",
     sold : false,
+    id: "A002003",
     tag : "|&nbsp;&nbsp;||&nbsp;&nbsp;||",
     description:'A3 16.5" x 11.7". marker on paper',
     art : "c002/art-dots.jpg"
