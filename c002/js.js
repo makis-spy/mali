@@ -36,6 +36,13 @@ var collection02 = {
     tag : "|&nbsp;&nbsp;||&nbsp;&nbsp;||",
     description:'A3 16.5" x 11.7". marker on paper',
     art : "c002/art-trap.jpg"
+  },
+  GODDESSIMG:{
+    price:"2000",
+    sold : false,
+    tag : "|&nbsp;&nbsp;||&nbsp;&nbsp;||",
+    description:'A3 16.5" x 11.7". marker on paper',
+    art : "c002/art-goddess.jpg"
   }
 
 }
@@ -134,7 +141,7 @@ $(document).ready(function(){
     })
 
 
-    $(".round, .art-box").on("click",function(){
+    $(".round, .art-box, .lb").on("click",function(){
 
       openLighBox(this)
     })
@@ -155,7 +162,7 @@ new ScrollMagic.Scene({triggerElement: "#A002001", triggerHook: 0})
 							.setClassToggle("#collection002 h1", "zoom-out")
 							.addTo(controller)
 
-new ScrollMagic.Scene({triggerElement: "#goddess", triggerHook: 0})
+new ScrollMagic.Scene({triggerElement: "#goddess", triggerHook: 0, offset:100})
 							.setClassToggle("#nav", "open")
 							.addTo(controller)
 
