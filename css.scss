@@ -2,10 +2,12 @@ html, body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  background: #0E0E0E;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
+  text-rendering: optimizeSpeed;
 }
 
 .fade-in{
@@ -22,6 +24,22 @@ $navHeight : 50px;
   &:hover {
     background-color: rgba(0,0,0,1);
   }
+}
+
+
+#drip {
+  width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   opacity: 0;
+   transition: all 0.5s;
+}
+
+#drip.show-me {
+  opacity: 1;
+  z-index: 10000;
 }
 
 #nav {
@@ -116,14 +134,68 @@ collection {
   overflow: hidden;
   position: relative;
   z-index: 2;
+  background: #fff;
   box-shadow: 10px 0px 20px rgba(0,0,0,0.1);
   padding-bottom: 100px;
-  .art-box{
-    border:3px solid;
-    background-size: cover !important;
+
+
+  .i-thumbs {
+    margin: 1200px auto 100 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  
+
   }
 
+
+  .card {
+    max-width: 600px;
+    width: 100%;
+    display: block;
+    top:400px;
+    left:50%;
+    transform: translate(-50%,-20%);
+    opacity: 0;
+    transition: all 3s;
+    position: absolute;
+  }
+
+  .art-box {
+
+    border: 0;
+    clear: both;
+    display: inline-block;
+    margin: 100px auto !important;
+    clear: both;
+    cursor: pointer;
+    img {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+
+
+    }
+
+    &.guys-best {
+      max-width: none;
+      width: 100%;
+    }
+  }
+
+
 }
+
+
+
+#bloody-guys {
+  img {
+    display: block;
+    margin: 100px auto;
+  }
+}
+
+
 
 #product-splash{
   //background: url(img/products/screen-saver-splash.jpg) center center #ffffff no-repeat;
@@ -250,7 +322,7 @@ collection {
           height: 100%;
           top:50%;
           left:50%;
-          transform: translate(-50%,-55%);
+          transform: translate(-50%,-50%);
           position: absolute;
           max-height: 700px;
           max-width: 900px;
@@ -258,7 +330,7 @@ collection {
     }
 
     #art-details {
-
+      display: none;
       a {
         text-decoration: none;
         color:red;

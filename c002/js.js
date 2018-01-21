@@ -39,6 +39,22 @@ var collection02 = {
   }
 
 }
+var guys = {
+  best:{
+    price:"300",
+    sold : false,
+    tag : "eyes",
+    description:'A3 16.5" x 11.7". marker on paper',
+    art : "guys/art-best.jpg"
+  },
+  party:{
+      price:"300",
+      sold : false,
+      tag : "eyes",
+      description:'A3 16.5" x 11.7". marker on paper',
+      art : "guys/art-guy-party.jpg"
+    }
+}
 var illustrations = {
   eyes:{
     price:"300",
@@ -134,20 +150,38 @@ $(document).ready(function(){
 var controller = new ScrollMagic.Controller();
 
 
-new ScrollMagic.Scene({triggerElement: "#collection002 h1", triggerHook: "0.2"})
+
+new ScrollMagic.Scene({triggerElement: "#A002001", triggerHook: 0})
 							.setClassToggle("#collection002 h1", "zoom-out")
 							.addTo(controller)
 
-new ScrollMagic.Scene({triggerElement: "#A002005", triggerHook: "onLeave"})
+new ScrollMagic.Scene({triggerElement: "#goddess", triggerHook: 0})
 							.setClassToggle("#nav", "open")
 							.addTo(controller)
 
-new ScrollMagic.Scene({triggerElement: "#A002004", duration:200, triggerHook: "0.4"})
-							.setClassToggle("#intro-viz", "out")
+new ScrollMagic.Scene({triggerElement: "#A002001",duration:400, triggerHook: 0})
+							.setClassToggle("#intro-viz", "in")
 							.addTo(controller)
 
 
-  new ScrollMagic.Scene({triggerElement: "#illustration-splash", triggerHook: "0.02"})
+new ScrollMagic.Scene({triggerElement: "#illustration-splash", triggerHook: 0.4})
   							.setClassToggle("#illustration-splash-img", "fade-in")
                 .reverse(false)
   							.addTo(controller)
+
+
+/*
+
+new ScrollMagic.Scene({triggerElement: "#bloody-guys", triggerHook:1, duration:800})
+              .setPin('#bloody-guys')
+		          .on('enter',function(){
+                    Drip.init(document.getElementById('drip'))
+                    document.getElementById('drip').className="show-me"
+                  }
+              )
+              .on('leave',function(){
+                  document.getElementById('drip').className=""
+              })
+							.addTo(controller)
+
+*/

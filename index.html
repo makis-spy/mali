@@ -1,183 +1,188 @@
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
 
     <title>MANISA MALI</title>
 
-    <link rel="stylesheet" href="libs/imageviewer.css?v=1.0"/>
+    <link rel="stylesheet" href="libs/imageviewer.css?v=1.0" />
 
-    <link rel="stylesheet" href="css.css?v=1.0"/>
+    <link rel="stylesheet" href="css.css?v=1.0" />
 
-    <link rel="stylesheet" href="c002/c002.css?v=1.0"/>
-    <link rel="stylesheet" href="illustration/illustration.css?v=1.0"/>
+    <link rel="stylesheet" href="c002/c002.css?v=1.0" />
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
     <style>
-        * {
-          font-family: 'Abel', sans-serif;
-          font-size: 1em;
+        div,
+        a,
+        p {
+            font-family: 'Abel', sans-serif;
+            font-size: 1em;
         }
     </style>
 </head>
 
-  <body>
+<body>
 
-  <div id="nav" class="dark">
+    <canvas id="drip" width="400" height="400"></canvas>
 
-    <ul>
-      <li><a href="javascript://" go-to="collection002">Collection I&nbsp;&nbsp;II</a></li>
-      <li><a href="javascript://" go-to="illustration-splash">Illustration</a></li>
-      <li><a href="javascript://" go-to="product-splash">Phone Swank</a></li>
-      <li><a href="javascript://" go-to="branding">Brand Design</a></li>
-      <li><a href="javascript://" go-to="bio">About me</a></li>
-    </ul>
-  </div>
+    <div id="nav" class="dark">
 
-  <div class="section c002" id="collection002">
+        <ul>
+            <li><a href="javascript://" go-to="collection002">Collection I&nbsp;&nbsp;II</a></li>
+            <li><a href="javascript://" go-to="illustration-splash">My Guys </a></li>
+            <li><a href="javascript://" go-to="product-splash">Phone Swank</a></li>
+            <li><a href="javascript://" go-to="branding">Brand Design</a></li>
+            <li><a href="javascript://" go-to="bio">About me</a></li>
+        </ul>
+    </div>
 
-      <div class="stars">
-          <div id='stars'></div>
-      </div>
+    <div class="section c002" id="collection002">
 
-      <div id="intro-viz"></div>
-      <div class="thumbs">
+        <div class="stars one">
+            <div class='stars-x'></div>
+        </div>
 
-            <div class="round"  data-img="art-space" id="A002001" data-collection="collection02"></div>
+        <div class="stars">
+            <div class='stars-x'></div>
+        </div>
+
+        <div id="intro-viz"></div>
+        <div class="thumbs">
+
+            <div class="round" data-img="art-space" id="A002001" data-collection="collection02"></div>
 
             <h1>Manisa Mali <br><collection>New Collection ... &nbsp;ART I&nbsp;&nbsp;II</collection></h1>
 
             <div class="round" data-img="art-bum" id="A002004" data-collection="collection02"></div>
             <div class="round" data-img="art-dots" id="A002003" data-collection="collection02"></div>
-            <div class="round" data-img="art-pope"  id="A002002" data-collection="collection02"></div>
-
+            <div class="round" data-img="art-pope" id="A002002" data-collection="collection02"></div>
 
             <div class="round" data-img="art-trap" id="A002005" data-collection="collection02"></div>
 
-      </div>
 
-
-
-  </div>
-  <div class="section" id="illustration-splash">
-          <img class="card" id="illustration-splash-img" src="illustration/card.jpg">
-          <div class="i-thumbs">
-
-              <div class="art-box" style="margin-bottom:50px" data-img="art-hat" id="hat" data-collection="illustrations">
-                <img src="illustration/thumb-hat.jpg">
-              </div>
-
-              <div class="art-box" data-img="art-eyes" id="eyes" data-collection="illustrations">
-                  <img src="illustration/thumb-eyes.jpg">
-              </div>
-
-              <div class="art-box" data-img="art-leaves" id="leaves" data-collection="illustrations">
-                  <img src="illustration/thumb-leaves.jpg">
-              </div>
-              <div class="art-box" data-img="art-jail" id="jail" data-collection="illustrations">
-                  <img src="illustration/thumb-jail.jpg">
-              </div>
-
-              <div class="art-box" data-img="art-kids" id="kids" data-collection="illustrations">
-                <img src="illustration/thumb-kids.jpg">
-              </div>
-
-
-
-          </div>
-  </div>
-
-
-  <div class="section" id="product-splash">
-        <img src="img/products/screen-saver-splash.png"/>
-  </div>
-  <div class="section" id="branding">
-    <img src="img/brand/map.svg">
-    <img src="img/brand/logos.png" class="logos-img">
-  </div>
-  <div class="section" id="bio">
-
-            <div class="block">
-                <h2>Born in Bangkok, Studied in New York, Married in Greece and now in London...</h2>
-
-                <p>I started creating ... what makes art fun or magical why you create art?</p>
-                <p>I get inspriation from my head...</p>
-                <p>Experimenting woth colors and stuff..</p>
-
-
-            </div>
-            <div class="bg">
-                <img src="img/me.jpg">
-                <p>New York 2014<br> Art in the background by Petar. East Villave 2009</p>
+            <div id="goddess">
+            	<div id="goddess-img"></div>
+            	<div id="rays"></div>
             </div>
 
-  </div>
-  <div class="section" id="contact">
 
 
+        </div>
 
-      <div class="block">
+    </div>
 
+    <div class="section" id="illustration-splash">
+        <img class="card lazy-1 " id="illustration-splash-img" data-src="illustration/card.jpg">
+        <div class="i-thumbs">
 
+            <div class="art-box guys-best" style="margin-bottom:50px" id="best" data-collection="guys">
+                <img data-src="guys/art-best.jpg" class="lazy-1">
+            </div>
 
-          <a href="javascript://" onclick="">email me</a>
+        </div>
 
+    </div>
 
+    <div class="section" id="bloody-guys">
 
+        <div class="art-box" style="margin-bottom:50px" id="best" data-collection="guys">
+            <img data-src="guys/thumb-dead-weight.jpg" class="lazy-1">
+        </div>
 
-      </div>
-  </div>
+    </div>
+    <div class="section" id="product-splash">
+        <img data-src="img/products/screen-saver-splash.png" class="lazy-2" />
+    </div>
+    <div class="section" id="branding">
+        <img data-src="img/brand/map.svg" class="lazy-2">
+        <img data-src="img/brand/logos.png" class="logos-img lazy-2">
+    </div>
+    <div class="section" id="bio">
 
-  <div id="art-window">
+        <div class="block">
+            <h2>Born in Bangkok, Studied in New York, Married in Greece and now in London...</h2>
 
-    <div id="art-image"></div>
-    <div id="art-details"></div>
-    <a href="javascript://" id="close-box" class="iv-close"></a>
+            <p>I started creating ... what makes art fun or magical why you create art?</p>
+            <p>I get inspriation from my head...</p>
+            <p>Experimenting woth colors and stuff..</p>
 
-  </div>
+        </div>
+        <div class="bg">
+            <img data-src="img/me.jpg" class="lazy-2">
+            <p>New York 2014
+                <br> Art in the background by Petar. East Villave 2009</p>
+        </div>
 
+    </div>
+    <div class="section" id="contact">
 
-  <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+        <div class="block">
 
+            <a href="javascript://" onclick="">email me</a>
 
-  <script id="art-template" type="text/x-handlebars-template">
+        </div>
+    </div>
 
+    <div id="art-window">
 
+        <div id="art-image"></div>
+        <div id="art-details"></div>
+        <a href="javascript://" id="close-box" class="iv-close"></a>
 
-              {{#if sold}}
-                <p class="sold">£{{price}}</p>
-                <p>Sorry. Someone took this home already :(</a>
-              {{else}}
-                <p class="">£{{price}}</p>
-                <p><a href="http://www.paypal.com">own it</a></p>
-              {{/if}}
-                <p class="desc">{{description}}</p>
+    </div>
 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
 
-              
+    <script id="art-template" type="text/x-handlebars-template">
 
+        {{#if sold}}
+        <p class="sold">£{{price}}</p>
+        <p>Sorry. Someone took this home already :(</a>
+            {{else}}
+            <p class="">£{{price}}</p>
+            <p><a href="http://www.paypal.com">own it</a></p>
+            {{/if}}
+            <p class="desc">{{description}}</p>
 
+            <!--p class="tag">{{{tag}}}</p-->
 
-                  <!--p class="tag">{{{tag}}}</p-->
-
-
-	</script>
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"></script>
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
     <script src="libs/imageviewer.min.js"></script>
+    <script src="c002/drip.js"></script>
     <script src="js.js"></script>
     <script src="c002/js.js"></script>
 
-  </body>
-</html>
+    <script>
+        function loadem(set) {
+            var allimages = document.getElementsByClassName("lazy-" + set)
 
+            for (var i = 0; i < allimages.length; i++) {
 
+                if (allimages[i].getAttribute("data-src")) {
+                    allimages[i].setAttribute("src", allimages[i].getAttribute("data-src"))
+                }
+            }
+        }
+
+        window.addEventListener(
+            "load",
+            function() {
+                loadem('1')
+            },
+            false
+        )
+    </script>
 
 </body>
+
+</html>
+
+</body>
+
 </html>
