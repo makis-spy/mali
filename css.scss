@@ -2,7 +2,7 @@ html, body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background: #0E0E0E;
+  background: #fff;
 }
 
 *, *:before, *:after {
@@ -135,7 +135,7 @@ collection {
   position: relative;
   z-index: 2;
   background: #fff;
-  box-shadow: 10px 0px 20px rgba(0,0,0,0.1);
+  //box-shadow: 10px 0px 20px rgba(0,0,0,0.1);
   padding-bottom: 100px;
 
 
@@ -144,7 +144,7 @@ collection {
     display: flex;
     align-items: center;
     flex-direction: column;
-  
+
 
   }
 
@@ -189,8 +189,11 @@ collection {
 
 
 #bloody-guys {
+  background: #fff;
   img {
     display: block;
+    width:100%;
+    max-width: 1000px;
     margin: 100px auto;
   }
 }
