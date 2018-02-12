@@ -27,7 +27,7 @@
 
 <body>
 
-    <canvas id="drip" width="400" height="400"></canvas>
+    <canvas id="drip"></canvas>
 
     <div id="nav" class="dark">
 
@@ -88,14 +88,22 @@
         </div>
 
     </div>
+    <div class="section" id="drip-div">
 
+    </div>
     <div class="section" id="bloody-guys">
 
-        <div class="art-box" style="margin-bottom:50px" id="best" data-collection="guys">
+
+
+        <div class="art-box" style="margin-bottom:100px" id="deadWeight" data-collection="guys">
             <img data-src="guys/thumb-dead-weight.jpg" class="lazy-1">
+        </div>
+        <div class="art-box" style="margin-bottom:50px" id="floaters" data-collection="guys">
+            <img data-src="guys/thumb-floaters.jpg" class="lazy-1">
         </div>
 
     </div>
+
     <div class="section" id="product-splash">
         <img data-src="img/products/screen-saver-splash.png" class="lazy-2" />
     </div>
@@ -135,12 +143,15 @@
         <div id="art-details"></div>
         <a href="javascript://" id="close-box" class="iv-close"></a>
 
+
     </div>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
 
     <script id="art-template" type="text/x-handlebars-template">
 
+        <p class="story">"{{story}}"</p>
+        <!--
         {{#if sold}}
         <p class="sold">£{{price}}</p>
         <p>Sorry. Someone took this home already :(</a>
@@ -150,7 +161,7 @@
             {{/if}}
             <p class="desc">{{description}}</p>
 
-            <!--p class="tag">{{{tag}}}</p-->
+            <p class="tag">{{{tag}}}</p-->
 
     </script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>

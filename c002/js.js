@@ -40,6 +40,7 @@ var collection02 = {
   GODDESSIMG:{
     price:"2000",
     sold : false,
+    story: "They like her because she helps them kill the bad guys",
     tag : "|&nbsp;&nbsp;||&nbsp;&nbsp;||",
     description:'A3 16.5" x 11.7". marker on paper',
     art : "c002/art-goddess.jpg"
@@ -54,13 +55,20 @@ var guys = {
     description:'A3 16.5" x 11.7". marker on paper',
     art : "guys/art-best.jpg"
   },
-  party:{
+  deadWeight:{
       price:"300",
       sold : false,
       tag : "eyes",
       description:'A3 16.5" x 11.7". marker on paper',
-      art : "guys/art-guy-party.jpg"
-    }
+      art : "guys/art-dead-weight.jpg"
+    },
+    floaters:{
+        price:"300",
+        sold : false,
+        tag : "eyes",
+        description:'A3 16.5" x 11.7". marker on paper',
+        art : "guys/art-floaters.jpg"
+      }
 }
 var illustrations = {
   eyes:{
@@ -177,18 +185,24 @@ new ScrollMagic.Scene({triggerElement: "#illustration-splash", triggerHook: 0.4}
   							.addTo(controller)
 
 
-/*
 
-new ScrollMagic.Scene({triggerElement: "#bloody-guys", triggerHook:1, duration:800})
-              .setPin('#bloody-guys')
+
+new ScrollMagic.Scene({triggerElement: "#drip-div", triggerHook:0})
 		          .on('enter',function(){
+            
                     Drip.init(document.getElementById('drip'))
                     document.getElementById('drip').className="show-me"
                   }
               )
-              .on('leave',function(){
-                  document.getElementById('drip').className=""
-              })
+              .reverse(false)
 							.addTo(controller)
 
-*/
+
+new ScrollMagic.Scene({triggerElement: "#deadWeight"})
+		          .on('enter',function(){
+
+                  //  document.getElementById('drip').className=""
+                  }
+              )
+              .reverse(false)
+              .addTo(controller)
