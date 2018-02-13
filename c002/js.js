@@ -180,6 +180,7 @@ new ScrollMagic.Scene({triggerElement: "#A002001",duration:400, triggerHook: 0})
 
 
 new ScrollMagic.Scene({triggerElement: "#illustration-splash", triggerHook: 0.4})
+
   							.setClassToggle("#illustration-splash-img", "fade-in")
                 .reverse(false)
   							.addTo(controller)
@@ -187,13 +188,14 @@ new ScrollMagic.Scene({triggerElement: "#illustration-splash", triggerHook: 0.4}
 
 
 
-new ScrollMagic.Scene({triggerElement: "#drip-div", triggerHook:0})
+new ScrollMagic.Scene({triggerElement: "#deadWeight", triggerHook:1, duration:500})
 		          .on('enter',function(){
-            
+
                     Drip.init(document.getElementById('drip'))
                     document.getElementById('drip').className="show-me"
                   }
               )
+              .setPin("#floaters")
               .reverse(false)
 							.addTo(controller)
 
@@ -201,8 +203,8 @@ new ScrollMagic.Scene({triggerElement: "#drip-div", triggerHook:0})
 new ScrollMagic.Scene({triggerElement: "#deadWeight"})
 		          .on('enter',function(){
 
-                  //  document.getElementById('drip').className=""
+                    document.getElementById('drip').className=""
                   }
               )
-              .reverse(false)
+              //.reverse(false)
               .addTo(controller)

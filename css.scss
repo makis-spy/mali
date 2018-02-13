@@ -37,7 +37,15 @@ $navHeight : 50px;
    transition: all 0.5s;
    position: fixed;
    top:0;
-   left:0
+   left:0;
+   z-index:999999;
+   opacity: 0;
+   pointer-events: none;
+
+
+   &.show-me {
+     opacity: 1
+   }
 }
 
 
@@ -136,7 +144,7 @@ collection {
   z-index: 2;
   background: #fff;
   //box-shadow: 10px 0px 20px rgba(0,0,0,0.1);
-  padding-bottom: 100px;
+  padding-bottom: 0px;
 
 
   .i-thumbs {
@@ -339,7 +347,7 @@ collection {
 #bloody-guys {
   overflow: hidden;
   position: relative;
-  padding-top: 200px;
+  padding-top: 100px;
 
     background: #fff;
     img {
@@ -360,7 +368,7 @@ collection {
   }
 
 #deadWeight {
-
+  margin-top: 100px;
 }
 
 @media screen and (max-width: 780px) {
