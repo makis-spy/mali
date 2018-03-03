@@ -1,4 +1,7 @@
 var controller = new ScrollMagic.Controller()
+$(document).ready(function(){
+
+
 
 $("#nav a").click(function() {
 	var go = "#" + $(this).attr("go-to")
@@ -26,6 +29,11 @@ for (var i = 0, l = togo.length; i < l; ++i) {
 		.addTo(controller)
 }
 
+new ScrollMagic.Scene({triggerElement: "#the-best-guys", triggerHook: "onEnter"})
+	.setClassToggle("#the-best-guys", "shownR")
+	.addTo(controller)
+
+
 new ScrollMagic.Scene({triggerElement: "#deadWeight", pushFollowers:true, triggerHook:"onEnter"})
 	.on("enter", function() {
 
@@ -37,7 +45,7 @@ new ScrollMagic.Scene({triggerElement: "#deadWeight", pushFollowers:true, trigge
 
     setTimeout(()=>{
       document.body.style.overflow="auto"
-    },8000)
+    },10000)
 
 	})
 	.setPin("#deadgo")
@@ -52,3 +60,6 @@ new ScrollMagic.Scene({triggerElement: "#deadgo", offset:100})
 	})
 	.reverse(false)
 	.addTo(controller)
+
+
+})

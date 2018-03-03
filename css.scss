@@ -59,6 +59,15 @@ $navHeight : 50px;
   opacity: 1;
   transform: translateY(0);
 }
+.fadedR {
+  opacity: 0;
+  transition: all 1.5s ease;
+  transform: translateX(250px);
+}
+.shownR {
+  opacity: 1;
+  transform: translateX(0);
+}
 
 #nav {
   opacity:0;
@@ -258,6 +267,7 @@ collection {
     &.guys-best {
       max-width: 800px;
       width: 100%;
+      margin-top: 20px;
     }
   }
 
@@ -270,21 +280,59 @@ collection {
 
 #product-splash{
   //background: url(img/products/screen-saver-splash.jpg) center center #ffffff no-repeat;
-  background-color: #ebedef;
+  background-color: #fafafa;
   background-size: cover;
-  min-height: 100vh;
+  height: 640px;
+
   width: 100%;
 
-  img {
-    display: block;
-    width: 100%;
-    max-width: 80vw;
+  padding: 30px;
+  display: block !important;
+
+
+  .crop-it {
+    max-width: 250px;
+    width:250px;
+    height:509px;
+    overflow: hidden;
+    position: relative;
+    background: #000000;
+    margin: 0 auto;
+    img {
+
+      display: block;
+      top:0;
+      left:0;
+      position: absolute;
+
+      &:first-child {
+
+        max-width: 1000px;
+      }
+
+      &:last-child{
+        pointer-events: none;
+        width:250px;
+        height:509px;
+
+      }
+
+    }
   }
 
 }
 
 #branding {
-  padding: 100px 30px 200px 30px;
+  h1 {
+    font-size: 80px;
+    font-weight: bold;
+    z-index: 30;
+    right:200px;
+
+    display: inline-block;
+
+  }
+  padding: 60px 30px 200px 30px;
   .logos-img {
     width: 100%;
     max-width: 700px;
@@ -450,6 +498,8 @@ collection {
     text-decoration: none;
     color:#000;
     margin-right: 20px;
+    padding: 3px 10px;
+    background: #e7e7e7;
 
     &:hover {
       color:#fff;
@@ -462,6 +512,7 @@ collection {
   width:50px;
   cursor: pointer;
 }
+
 
 
 @media only screen and (max-width: 800px){
@@ -480,7 +531,7 @@ collection {
     .instagram-media-container-002 {
       float: none;
       margin: 0 !important;
-      
+
 
     }
   }
@@ -634,17 +685,22 @@ collection {
       margin: 0 !important;
   }
 
-  #product-splash{
-    display: none;
-  }
 
   #branding {
+
     padding: 0px 20px 20px 20px;
-    min-height: none !important;
+    overflow: hidden;
+
+    h1 {
+      font-size: 64px;
+      font-weight: bold;
+      right:30px;
+    }
 
     img#svg-brand-1 {
       width:320px !important;
-      position: absolute;
+
+      top:80px;
 
     }
 
