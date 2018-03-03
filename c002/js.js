@@ -37,7 +37,15 @@ var collection02 = {
     description:'A3 16.5" x 11.7". marker on paper',
     art : "c002/art-trap.jpg"
   },
-  GODDESSIMG:{
+  A002006:{
+    price:"200",
+    sold : false,
+    tag : "|&nbsp;&nbsp;||&nbsp;&nbsp;||",
+    description:'A3 16.5" x 11.7". marker on paper',
+    art : "c002/art-thrones.jpg",
+    story : "kill peepo"
+  },
+  GODDESSING:{
     price:"2000",
     sold : false,
     story: "They like her because she helps them kill the bad guys",
@@ -68,7 +76,14 @@ var guys = {
         tag : "eyes",
         description:'A3 16.5" x 11.7". marker on paper',
         art : "guys/art-floaters.jpg"
-      }
+      },
+      partiers:{
+          price:"300",
+          sold : false,
+          tag : "eyes",
+          description:'A3 16.5" x 11.7". marker on paper',
+          art : "guys/art-guy-party.jpg"
+        }
 }
 var illustrations = {
   eyes:{
@@ -162,9 +177,16 @@ $(document).ready(function(){
 })
 
 
-var controller = new ScrollMagic.Controller();
 
 
+
+var c002thumbs = document.querySelectorAll('#collection002 .round')
+
+for(var i = 0, l=c002thumbs.length; i<l; ++i){
+  new ScrollMagic.Scene({triggerElement: c002thumbs[i], triggerHook: 'onEnter'})
+                .setClassToggle(c002thumbs[i], 'show')
+                .addTo(controller)
+}
 
 new ScrollMagic.Scene({triggerElement: "#A002001", triggerHook: 0})
 							.setClassToggle("#collection002 h1", "zoom-out")
@@ -184,27 +206,3 @@ new ScrollMagic.Scene({triggerElement: "#illustration-splash", triggerHook: 0.4}
   							.setClassToggle("#illustration-splash-img", "fade-in")
                 .reverse(false)
   							.addTo(controller)
-
-
-
-
-new ScrollMagic.Scene({triggerElement: "#deadWeight", triggerHook:1, duration:500})
-		          .on('enter',function(){
-
-                    Drip.init(document.getElementById('drip'))
-                    document.getElementById('drip').className="show-me"
-                  }
-              )
-              .setPin("#floaters")
-              .reverse(false)
-							.addTo(controller)
-
-
-new ScrollMagic.Scene({triggerElement: "#deadWeight"})
-		          .on('enter',function(){
-
-                    document.getElementById('drip').className=""
-                  }
-              )
-              //.reverse(false)
-              .addTo(controller)
