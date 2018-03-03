@@ -45,7 +45,7 @@ new ScrollMagic.Scene({triggerElement: "#deadWeight", pushFollowers:true, trigge
 
     setTimeout(()=>{
       document.body.style.overflow="auto"
-    },10000)
+    },8000)
 
 	})
 	.setPin("#deadgo")

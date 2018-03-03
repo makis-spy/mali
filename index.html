@@ -102,7 +102,7 @@
 
 
     <div class="section" id="illustration-splash">
-        <img class="card lazy-1 " id="illustration-splash-img" data-src="illustration/card.jpg">
+        <img class="card lazy-1 faded" id="illustration-splash-img" data-src="illustration/card.jpg">
         <div class="i-thumbs">
 
             <div class="art-box guys-best"  id="best" data-collection="guys">
@@ -130,14 +130,24 @@
 
     <div class="section" id="product-splash">
 
+          <h2>GRAB EM...</h2>
+
+          <a id="p-spc" href="c002/art-space.jpg" download></a>
+          <a id="p-ppe" href="c002/art-pope.jpg" download></a>
+          <a id="p-gds" href="c002/art-goddess.jpg" download></a>
+
+
+
+
           <div class="swiper-container">
+                    <div class="swiper-pagination"></div>
 
                     <div class="swiper-wrapper">
 
                                   <div class="swiper-slide">
 
-                                          <form method="get" id="one" action="c002/art-space.jpg"></form>
-                                          <div class="faded crop-it" frm="one">
+
+                                          <div class="crop-it" frm="p-spc">
                                                 <img src="c002/art-space.jpg" class="swag lazy-2">
                                                 <img src="img/phoneCover.png">
                                             </div>
@@ -146,17 +156,26 @@
 
                                   <div class="swiper-slide">
 
-                                            <form method="get" id="one" action="c002/art-space.jpg"></form>
-                                            <div class="faded crop-it" frm="one">
-                                                  <img src="c002/art-space.jpg" class="swag lazy-2">
+
+                                            <div class="crop-it" frm="p-ppe">
+                                                  <img src="c002/art-pope.jpg" class="swag lazy-2">
                                                   <img src="img/phoneCover.png">
                                               </div>
 
                                 </div>
+                                <div class="swiper-slide">
+
+
+                                          <div class="crop-it" frm="p-gds">
+                                                <img src="c002/art-goddess.jpg" class="swag lazy-2">
+                                                <img src="img/phoneCover.png">
+                                            </div>
+
+                              </div>
 
                   </div>
 
-                  <div class="swiper-pagination"></div>
+
          </div>
     </div>
     <div class="section" id="branding">
@@ -166,14 +185,18 @@
     </div>
     <div class="section" id="bio">
 
-
+      <div class="bg">
+          <img data-src="img/me.jpg" class="lazy-2">
+          <p>New York 2014
+          <br> Art in the background by Petar. East Villave 2009</p>
+      </div>
         <div class="block">
             <h2>Bangkok, New York, <br> Greece, Berlin and London... for now.</h2>
 
             <p>I can come up with some pretty fun and often disturbing stories for my guys to live out in my art.</p>
             <p>But my story is still unfolding and not sure if it is ready to tell just yet. Living in London after so many wonderful years in New York is giving me time to focus on my guys and see what they'll do next.</p>
 
-            <p  id="contact">
+            <p id="contact">
 
 
 
@@ -185,11 +208,7 @@
         </div>
 
 
-        <div class="bg">
-            <img data-src="img/me.jpg" class="lazy-2">
-            <p>New York 2014
-            <br> Art in the background by Petar. East Villave 2009</p>
-        </div>
+
 
     </div>
 
@@ -254,19 +273,29 @@ window.addEventListener(
 
                   $(".swag").draggable({
 
-                      drag : function(e){
-                        swiper.disable()
+                      start : function(e){
+
+                        swiper.allowSlideNext = false
+                        swiper.allowSlidePrev = false
+                      },
+                      stop: function(){
+                        swiper.allowSlideNext = true
+                        swiper.allowSlidePrev = true
                       }
                   })
 
                   var crops = document.getElementsByClassName('crop-it')
 
                   for(var i=0,l=crops.length;i<l;++i){
+
                     crops[i].addEventListener('touchstart', function() {
-                        let me = $(this).attr('id')
+
+                        let me = this
+
                         pressTimer = window.setTimeout(function() {
-                            $(me).submit()
-                        },1000);
+
+                            $("#"+$(me).attr('frm')).get(0).click()
+                        },1000)
                     })
                     crops[i].addEventListener('touchend', function() {
                         clearTimeout(pressTimer)
@@ -276,6 +305,7 @@ window.addEventListener(
 
                   var swiper = new Swiper('.swiper-container', {
                                               loop : true,
+                                              height : 600,
                                               threshold:20,
                                               pagination: {
                                                 el: '.swiper-pagination',

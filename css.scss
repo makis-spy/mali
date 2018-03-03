@@ -225,7 +225,6 @@ collection {
   //box-shadow: 10px 0px 20px rgba(0,0,0,0.1);
   padding-bottom: 0px;
 
-
   .i-thumbs {
     margin: 1200px auto 100 auto;
     display: flex;
@@ -240,12 +239,7 @@ collection {
     max-width: 600px;
     width: 100%;
     display: block;
-    top:400px;
-    left:50%;
-    transform: translate(-50%,-20%);
-    opacity: 0;
-    transition: all 3s;
-    position: absolute;
+    margin: 100px auto 0 auto;
   }
 
   .art-box {
@@ -281,14 +275,29 @@ collection {
 #product-splash{
   //background: url(img/products/screen-saver-splash.jpg) center center #ffffff no-repeat;
   background-color: #fafafa;
-  background-size: cover;
-  height: 640px;
+
+  position: relative;
+
+  overflow: hidden;
 
   width: 100%;
 
   padding: 30px;
   display: block !important;
 
+  .swiper-container{
+    height: 550px;
+  }
+
+  .swiper-pagination {
+    bottom: 20px;
+  }
+
+  h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
 
   .crop-it {
     max-width: 250px;
@@ -301,13 +310,13 @@ collection {
     img {
 
       display: block;
-      top:0;
-      left:0;
+
       position: absolute;
 
       &:first-child {
-
-        max-width: 1000px;
+        top:-100px;
+        left:-200px;
+        max-width: 800px;
       }
 
       &:last-child{
@@ -531,9 +540,19 @@ collection {
     .instagram-media-container-002 {
       float: none;
       margin: 0 !important;
+      opacity: 1 !important;
 
 
     }
+  }
+
+  #floaters {
+    margin-top: 200px !important
+  }
+
+  #partiers img {
+      margin-bottom: 50px !important;
+      margin-top: 150px !important
   }
 
 
@@ -611,6 +630,8 @@ collection {
   }
 
   #bio {
+    padding-top: 40px;
+
     h2 {
       margin-bottom: 20px;
     }
@@ -695,6 +716,7 @@ collection {
       font-size: 64px;
       font-weight: bold;
       right:30px;
+      padding-left: 20px;
     }
 
     img#svg-brand-1 {
