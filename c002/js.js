@@ -5,7 +5,8 @@ var collection02 = {
     id: "A002001",
     tag : "|&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;|",
     description:'A3 16.5" x 11.7". marker on paper',
-    art : "c002/art-space.jpg"
+    art : "c002/art-space.jpg",
+    story: "This guy went into space to plant a flag on the moon and on the way alien giraffes blocked him in a spaceship. The giraffes want to fight him."
   },
   A002002:{
     price:"800",
@@ -13,7 +14,8 @@ var collection02 = {
     id: "A002002",
     tag : "|&nbsp;&nbsp;||&nbsp;&nbsp;||",
     description:'A3 16.5" x 11.7". marker on paper',
-    art : "c002/art-pope.jpg"
+    art : "c002/art-pope.jpg",
+    story: "Everyone checking out her sexy bum"
   },
   A002003:{
     price:"800",
@@ -21,21 +23,25 @@ var collection02 = {
     id: "A002003",
     tag : "|&nbsp;&nbsp;||&nbsp;&nbsp;||",
     description:'A3 16.5" x 11.7". marker on paper',
-    art : "c002/art-dots.jpg"
+    art : "c002/art-dots.jpg",
+    story : "Trap maze game"
   },
   A002004:{
     price:"1200",
     sold : false,
     tag : "|&nbsp;&nbsp;||&nbsp;&nbsp;||",
     description:'A3 16.5" x 11.7". marker on paper',
-    art : "c002/art-bum.jpg"
+    art : "c002/art-bum.jpg",
+    story: "She come back from space to get revenge on the little guys."
   },
   A002005:{
     price:"200",
     sold : false,
     tag : "|&nbsp;&nbsp;||&nbsp;&nbsp;||",
     description:'A3 16.5" x 11.7". marker on paper',
-    art : "c002/art-trap.jpg"
+    art : "c002/art-trap.jpg",
+    story:"If they fall they die"
+
   },
   A002006:{
     price:"200",
@@ -43,7 +49,7 @@ var collection02 = {
     tag : "|&nbsp;&nbsp;||&nbsp;&nbsp;||",
     description:'A3 16.5" x 11.7". marker on paper',
     art : "c002/art-thrones.jpg",
-    story : "kill peepo"
+    story : "Portrait with the little guys that he trapped"
   },
   GODDESSING:{
     price:"2000",
@@ -51,7 +57,8 @@ var collection02 = {
     story: "They like her because she helps them kill the bad guys",
     tag : "|&nbsp;&nbsp;||&nbsp;&nbsp;||",
     description:'A3 16.5" x 11.7". marker on paper',
-    art : "c002/art-goddess.jpg"
+    art : "c002/art-goddess.jpg",
+    story : "Those guys like her because she help them kill the bad guy"
   }
 
 }
@@ -62,27 +69,31 @@ var guys = {
     tag : "eyes",
     description:'A3 16.5" x 11.7". marker on paper',
     art : "guys/art-best.jpg"
+
   },
   deadWeight:{
       price:"300",
       sold : false,
       tag : "eyes",
       description:'A3 16.5" x 11.7". marker on paper',
-      art : "guys/art-dead-weight.jpg"
+      art : "guys/art-dead-weight.jpg",
+      story : "Guys went to super market to buy giraffe heads. But the bodies haunted him so he runaway"
     },
     floaters:{
         price:"300",
         sold : false,
         tag : "eyes",
         description:'A3 16.5" x 11.7". marker on paper',
-        art : "guys/art-floaters.jpg"
+        art : "guys/art-floaters.jpg",
+        story : "Cutting heads to make a ballon"
       },
       partiers:{
           price:"300",
           sold : false,
           tag : "eyes",
           description:'A3 16.5" x 11.7". marker on paper',
-          art : "guys/art-guy-party.jpg"
+          art : "guys/art-guy-party.jpg",
+          story : "Guy party"
         }
 }
 var illustrations = {
