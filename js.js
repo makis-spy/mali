@@ -21,6 +21,12 @@ $("#nav .hamburger").click(function() {
 	})
 })
 
+
+setTimeout(function(){
+
+
+
+
 var togo = document.querySelectorAll(".faded")
 
 for (var i = 0, l = togo.length; i < l; ++i) {
@@ -60,6 +66,9 @@ new ScrollMagic.Scene({triggerElement: "#deadgo", offset:100})
 	})
 	.reverse(false)
 	.addTo(controller)
+
+
+},1000)
 
 
 })

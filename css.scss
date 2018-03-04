@@ -547,11 +547,14 @@ collection {
   .vids {
     display: flex !important;
     flex-direction: column;
-
+    align-items: center;
+    justify-content: center;
 
     .instagram-media-container-002 {
+      max-width: 360px !important;
+      height: 364px !important;
       float: none;
-      margin: 0 !important;
+      margin: 0 0px 50px 0px !important;
       opacity: 1 !important;
 
 

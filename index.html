@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>MANISA MALI</title>
+    <title>MANISA MALI ARTIST</title>
 
     <link rel="stylesheet" href="libs/imageviewer.css?v=1.0" />
 
@@ -14,11 +14,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:site_name" content="Manisa Mali - Artist"/>
+    <meta property="og:description" content="I create guys to live out stories that are fun and maybe a little disturbing in my art."/>
+    <meta property="og:image" content="c002/art-space.jpg">
 
 
+    <meta property="og:url" content="http://manisamali.com/">
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/css/swiper.min.css" rel="stylesheet">
+
+
     <style>
+        h1,h2,h3{
+          font-family: 'Abel', sans-serif;
+        }
         div,a,p {
             font-family: 'Abel', sans-serif;
             font-size: 1em;
@@ -189,22 +198,22 @@
          </div>
     </div>
     <div class="section" id="branding">
-        <h1>BRAND WORK</h1>
-        <img data-src="img/brand/map.svg" id="svg-brand-1" class="lazy-2">
-        <img data-src="img/brand/logos.png" class="logos-img lazy-2">
+        <h1 class="faded">brand work.</h1>
+        <img data-src="img/brand/map.svg" id="svg-brand-1" class="lazy-2 ">
+        <img data-src="img/brand/logos.png" class="logos-img lazy-2 faded">
     </div>
     <div class="section" id="bio">
 
       <div class="bg">
           <img data-src="img/me.jpg" class="lazy-2">
-          <p>New York 2014
-          <br> Art in the background by Petar. East Villave 2009</p>
+          <p>New York 2014</p>
+          <p> Art in background by Petar. East Village 2009</p>
       </div>
         <div class="block">
             <h2>Bangkok, New York, <br> Greece, Berlin and London... for now.</h2>
 
             <p>I can come up with some pretty fun and often disturbing stories for my guys to live out in my art.</p>
-            <p>But my story is still unfolding and not sure if it is ready to tell just yet. Living in London after so many wonderful years in New York is giving me time to focus on my guys and see what they'll do next.</p>
+            <p>My story is unfolding and not sure if it is ready to tell just yet. Living in London after so many wonderful years in New York is giving me time to focus on my guys and see what they'll do next.</p>
 
             <p id="contact">
 
@@ -231,6 +240,7 @@
 
     </div>
 
+
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
 
     <script id="art-template" type="text/x-handlebars-template">
@@ -249,6 +259,7 @@
             <p class="tag">{{{tag}}}</p-->
 
     </script>
+
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="libs/jquery.ui.touch-punch.min.js"></script>
@@ -261,71 +272,80 @@
 
     <script>
     function loadem(set) {
-	     var allimages = document.getElementsByClassName("lazy-" + set)
+	var allimages = document.getElementsByClassName("lazy-" + set)
 
-      	for (var i = 0; i < allimages.length; i++) {
-      		if (allimages[i].getAttribute("data-src")) {
-      			allimages[i].setAttribute("src", allimages[i].getAttribute("data-src"))
-      		}
-      	}
+	for (var i = 0; i < allimages.length; i++) {
+		if (allimages[i].getAttribute("data-src")) {
+			allimages[i].setAttribute("src", allimages[i].getAttribute("data-src"))
+		}
+	}
 }
 
 var pressTimer = 0
 
 window.addEventListener(
 	"load",
-    	function() {
-    		loadem("1")
+	function() {
+		loadem("1")
 
-              		setTimeout(function() {
-              			loadem("2")
-              		}, 1000)
+		setTimeout(function() {
+			loadem("2")
+		}, 1000)
 
-                  $(".swag").draggable({
+		var crops = document.getElementsByClassName("crop-it")
 
-                      start : function(e){
+		for (var i = 0, l = crops.length; i < l; ++i) {
+			crops[i].addEventListener("touchstart", function() {
+				let me = this
 
-                        swiper.allowSlideNext = false
-                        swiper.allowSlidePrev = false
-                      },
-                      stop: function(){
-                        swiper.allowSlideNext = true
-                        swiper.allowSlidePrev = true
-                      }
-                  })
+				pressTimer = window.setTimeout(function() {
+					$("#" + $(me).attr("frm"))
+						.get(0)
+						.click()
+				}, 700)
+			})
+			crops[i].addEventListener("touchend", function() {
+				clearTimeout(pressTimer)
+			})
+		}
 
-                  var crops = document.getElementsByClassName('crop-it')
+		var makeSwiper = function() {
+			return new Swiper(".swiper-container", {
+				loop: true,
+				height: 600,
+				threshold: 20,
+				pagination: {
+					el: ".swiper-pagination"
+				}
+			})
+		}
 
-                  for(var i=0,l=crops.length;i<l;++i){
+		var swiper = makeSwiper()
 
-                    crops[i].addEventListener('touchstart', function() {
+		$(".swag").draggable({
+      drag : function(){
+        clearTimeout(pressTimer)
+      },
+			start: function(e) {
 
-                        let me = this
+				swiper.allowSlideNext = false
+				swiper.allowSlidePrev = false
+			},
+			stop: function() {
+				swiper.allowSlideNext = true
+				swiper.allowSlidePrev = true
+			}
+		})
 
-                        pressTimer = window.setTimeout(function() {
-
-                            $("#"+$(me).attr('frm')).get(0).click()
-                        },1000)
-                    })
-                    crops[i].addEventListener('touchend', function() {
-                        clearTimeout(pressTimer)
-                    })
-                  }
-
-
-                  var swiper = new Swiper('.swiper-container', {
-                                              loop : true,
-                                              height : 600,
-                                              threshold:20,
-                                              pagination: {
-                                                el: '.swiper-pagination',
-                                              }
-                  })
-
-    	},
-    	false
-
-
+		$(".crop-it")
+			.mouseenter(function() {
+				swiper.detachEvents()
+			})
+			.mouseleave(function() {
+				swiper.attachEvents()
+			})
+	},
+	false
 )
 </script>
 

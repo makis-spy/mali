@@ -190,11 +190,13 @@ $(document).ready(function(){
 
 
 
-
 var c002thumbs = document.querySelectorAll('#collection002 .round')
+
+
 
 for(var i = 0, l=c002thumbs.length; i<l; ++i){
   new ScrollMagic.Scene({triggerElement: c002thumbs[i], triggerHook: 'onEnter'})
+
                 .setClassToggle(c002thumbs[i], 'show')
                 .addTo(controller)
 }
@@ -207,7 +209,7 @@ new ScrollMagic.Scene({triggerElement: "#goddess", triggerHook: 0, offset:100})
 							.setClassToggle("#nav", "open")
 							.addTo(controller)
 
-new ScrollMagic.Scene({triggerElement: "#A002001",duration:400, triggerHook: 0})
+new ScrollMagic.Scene({triggerElement: "#A002001",duration:200, triggerHook: 0})
 							.setClassToggle("#intro-viz", "in")
 							.addTo(controller)
 
