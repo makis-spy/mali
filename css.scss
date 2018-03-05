@@ -365,7 +365,7 @@ collection {
 
 #bio {
 
-  padding-top: 300px;
+  padding-top: 200px;
   padding-left: 30px;
   padding-right: 30px;
 
@@ -536,12 +536,25 @@ collection {
 
 
 
+
+
+
+// MOBILE
+
+
+
 @media only screen and (max-width: 800px){
 
   body {
 
     overflow-x: hidden;
     width: 100%;
+  }
+
+  #intro-viz {
+    background-size: cover !important;
+    max-width: none !important;
+    height: 550px !important
   }
 
   .vids {
@@ -599,6 +612,8 @@ collection {
         align-items: center;
         justify-content: center;
         top:82vh;
+        width:320px;
+        //box-shadow: 1px 1px 3px rgba(0,0,0,0.05);
 
         // /transform: none;
         p {
@@ -656,7 +671,19 @@ collection {
 
   #bio {
     padding-top: 40px;
-
+    padding-left: 0;
+    padding-right: 0;
+    > *{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .bg {
+      padding: 0;
+      p{
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
     h2 {
       margin-bottom: 20px;
     }
@@ -734,14 +761,16 @@ collection {
 
   #branding {
 
-    padding: 0px 20px 20px 20px;
+    padding: 40px 20px 20px 20px;
     overflow: hidden;
 
     h1 {
-      font-size: 64px;
+      font-size: 64px !important;
       font-weight: bold;
-      right:30px;
-      padding-left: 20px;
+      right:auto;
+      margin-bottom: 30px;
+
+      left: 20px;
     }
 
     img#svg-brand-1 {
@@ -755,10 +784,11 @@ collection {
       width: 90%;
       max-width: 700px;
       position: absolute;
+      margin-top: 40px;
       margin-left: 10px !important;
       margin-right: 10px !important;
-      top:40%;
-      left:0 !important
+      top:45%;
+      left:18px !important
     }
   }
 
