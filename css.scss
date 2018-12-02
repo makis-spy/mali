@@ -42,7 +42,21 @@ $navHeight : 50px;
     background-position: center;
 
     &.k-one {
+        div {
+          bottom: 30%;
+        }
        animation: colorRotate 5s linear infinite;
+    }
+    &.k-two {
+      img {
+        display: none;
+        max-width: 500px;
+        width: 100%;
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+      }
     }
     @keyframes colorRotate {
       100% {
