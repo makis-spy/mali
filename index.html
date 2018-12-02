@@ -21,7 +21,6 @@
 
     <meta property="og:url" content="http://manisamali.com/">
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/css/swiper.min.css" rel="stylesheet">
 
 
     <style>
@@ -40,24 +39,40 @@
     <canvas id="drip"></canvas>
 
     <div>
-    <div class="black-kids siema">
+    <div class="black-and-kids">
 
         <div class="k-slide k-one" style="background-image:url('K0001/K012.jpg')">
 
             <div>
               <h1>NEW COLLECTIONS! SWIPE ME 😍</h1>
-              <h3>k012</h3>
+              <h3>or scroll down. whatever 🤷</h3>
             </div>
 
         </div>
         <div class="k-slide k-two" style="background-image:url('c003/art-heads.jpg')">
 
           <div>
-            <h1>LIGHT + DARK NESS</h1>
-            <h3>c003</h3>
+            <h1>THE DARK COLLECTION</h1>
+            <h3>SHOP ONLINE</h3>
         </div>
 
-    </div>
+        </div>
+        <div class="k-slide k-center" style="background-image:url('K0001/K011.jpg')">
+
+              <div>
+                <h1>ALL NEW KIDS PRINTS</h1>
+                <h3>SHOP ONLINE 🛍</h3>
+              </div>
+
+        </div>
+        <div class="k-slide k-center" style="background-image:url('K0001/K013.jpg')">
+
+              <div>
+                <h1>AND 👑 ORIGINALS</h1>
+                <h3>SHOP ONLINE 🛍</h3>
+              </div>
+
+        </div>
     </div>
 
     <div id="nav" class="dark">
@@ -170,53 +185,40 @@
 
 
 
-          <div class="swiper-container">
-                    <div class="swiper-pagination"></div>
-
-                    <div class="swiper-wrapper">
-
-                                  <div class="swiper-slide">
+          <div class="phone-swag siema">
 
 
-                                          <div class="crop-it" frm="p-spc">
-                                                <img src="c002/art-space.jpg" class="swag i-spc lazy-2">
-                                                <img src="img/phoneCover.png">
-                                            </div>
+                      <div>
+
+
+                              <div class="crop-it" frm="p-spc">
+                                    <img src="c002/art-space.jpg" class="swag i-spc lazy-2">
+                                    <img src="img/phoneCover.png">
+                                </div>
+                      </div>
+
+
+                      <div>
+
+
+                                <div class="crop-it" frm="p-ppe">
+                                      <img src="c002/art-pope.jpg" class="swag lazy-2">
+                                      <img src="img/phoneCover.png">
                                   </div>
-                                  <div class="swiper-slide">
+
+                    </div>
+                    <div>
 
 
-                                            <div class="crop-it" frm="p-co3">
-                                                  <img src="c003/sneak.jpg" class="swag i-c03 lazy-2">
-                                                  <img src="img/phoneCover.png">
-                                              </div>
-
+                              <div class="crop-it" frm="p-gds">
+                                    <img src="c002/art-goddess.jpg" class="swag lazy-2">
+                                    <img src="img/phoneCover.png">
                                 </div>
-
-                                  <div class="swiper-slide">
-
-
-                                            <div class="crop-it" frm="p-ppe">
-                                                  <img src="c002/art-pope.jpg" class="swag lazy-2">
-                                                  <img src="img/phoneCover.png">
-                                              </div>
-
-                                </div>
-                                <div class="swiper-slide">
-
-
-                                          <div class="crop-it" frm="p-gds">
-                                                <img src="c002/art-goddess.jpg" class="swag lazy-2">
-                                                <img src="img/phoneCover.png">
-                                            </div>
-
-                              </div>
-
 
                   </div>
 
+              </div>
 
-         </div>
     </div>
     <div class="section" id="branding">
         <h1 class="faded">brand work.</h1>
@@ -288,7 +290,6 @@
     <script src="libs/jquery.ui.touch-punch.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
     <script src="libs/imageviewer.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/js/swiper.min.js"></script>
     <script src="c002/drip.js"></script>
     <script src="js.js"></script>
     <script src="c002/js.js"></script>
@@ -332,18 +333,7 @@ window.addEventListener(
 			})
 		}
 
-		var makeSwiper = function() {
-			return new Swiper(".swiper-container", {
-				loop: true,
-				height: 600,
-				threshold: 20,
-				pagination: {
-					el: ".swiper-pagination"
-				}
-			})
-		}
 
-		var swiper = makeSwiper()
 
 		$(".swag").draggable({
       drag : function(){
@@ -351,21 +341,18 @@ window.addEventListener(
       },
 			start: function(e) {
 
-				swiper.allowSlideNext = false
-				swiper.allowSlidePrev = false
 			},
 			stop: function() {
-				swiper.allowSlideNext = true
-				swiper.allowSlidePrev = true
+
 			}
 		})
 
 		$(".crop-it")
 			.mouseenter(function() {
-				swiper.detachEvents()
+
 			})
 			.mouseleave(function() {
-				swiper.attachEvents()
+
 			})
 	},
 	false
@@ -376,7 +363,10 @@ window.addEventListener(
 <script src="libs/siema.min.js"></script>
 
 <script>
-  new Siema()
+  new Siema({
+  selector: '.black-and-kids'})
+  new Siema({
+  selector: '.phone-swag'})
 </script>
 
 
