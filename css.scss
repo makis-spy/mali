@@ -41,6 +41,11 @@ $navHeight : 50px;
     position: relative;
     background-position: center;
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
     &.k-one {
         div {
           bottom: 30%;
@@ -659,6 +664,43 @@ collection {
 
     }
   }
+
+  .black-and-kids{
+
+    .k-slide{
+      div{
+        h1 {
+          white-space: normal;
+          margin-bottom: 10px;
+          font-size: 35px !important;
+        }
+      }
+
+      &.k-one{
+        div {
+          bottom: 10px;
+        }
+      }
+      &.k-center{
+        div {
+          //top:50px;
+          bottom: 200px;
+          h1 {
+            white-space: nowrap;
+          }
+        }
+      }
+      &.k-water {
+        div {
+          margin-left: 40px;
+          bottom: 42%;
+        }
+      }
+
+    }
+
+  }
+
 
   .fadedR {
     opacity: 0;
